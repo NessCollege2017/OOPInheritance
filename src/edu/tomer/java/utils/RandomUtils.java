@@ -7,6 +7,7 @@ import java.util.Random;
  */
 public class RandomUtils {
     private static  Random randGen = new Random();
+
     public static int[] nextRandomArray(int min, int max, int size){
         int[] result = new int[size];
         for (int i = 0; i < size; i++) {
@@ -38,7 +39,6 @@ public class RandomUtils {
      * @return a random number between  - n to +n
      */
    public static int nextRandom(int n){
-        Random randGen = new Random();
         int r = randGen.nextInt();//-int - int
         return r % (n + 1);
     }
