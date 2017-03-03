@@ -7,6 +7,8 @@ import edu.tomer.java.terminal.VIPPassenger;
 import edu.tomer.java.zoo.Animal;
 import edu.tomer.java.zoo.Cow;
 
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -14,7 +16,14 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-       ArrayList<Passenger> passengers = new ArrayList<>();
+
+
+        LocalDateTime now = LocalDateTime.now();//now
+        LocalDateTime localDateTime = LocalDateTime.of(2015, 2, 2, 0, 0);//input
+        long yearDiff = localDateTime.until(now, ChronoUnit.YEARS);//diff
+
+
+        ArrayList<Passenger> passengers = new ArrayList<>();
 
         //VIP
        VIPPassenger vipPassenger = new VIPPassenger("Hillary", 20, 0.1);
