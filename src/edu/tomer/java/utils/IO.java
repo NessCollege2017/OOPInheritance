@@ -146,4 +146,14 @@ public class IO {
         }
         System.out.println();
     }
+
+    public static Float getFloat(String prompt) {
+        System.out.println(prompt);
+        return scan.nextFloat();
+    }
+
+    public static double getDouble(String prompt) {
+        System.out.println(prompt);
+        return scan.nextDouble();
+    }
 }
