@@ -26,6 +26,7 @@ public class DateUtils {
 
     //input a date:
     public static LocalDateTime getDate(String prompt){
+        System.out.println(prompt);
         int year = IO.getInt("Enter the year", 1900, 2200);
         int month = IO.getInt("Enter the month", 1, 12);
         int day = IO.getInt("Enter the day", 1, 31);

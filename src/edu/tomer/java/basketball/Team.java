@@ -24,6 +24,7 @@ public class Team {
     }
 
     public void add(){
+        System.out.println("Add player to " + name);
         int choice = IO.getInt(
                 "1) Offence\n" +
                 "2) Defence\n" +
@@ -58,5 +59,9 @@ public class Team {
             score += didScore? 3 : 0;
         }
         return score;
+    }
+
+    public String getName() {
+        return name;
     }
 }
