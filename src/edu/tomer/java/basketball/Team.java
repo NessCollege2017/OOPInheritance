@@ -49,10 +49,14 @@ public class Team {
         }
     }
 
-    public void teamThrowFromThree(){
+    public int teamThrowFromThree(){
+        int score = 0;
         for (Player p : players) {
             boolean didScore = p.throwFrom3();
+            System.out.print(p.getFirstName() + " " );
             System.out.println(didScore?"Scored": "Missed...");
+            score += didScore? 3 : 0;
         }
+        return score;
     }
 }
